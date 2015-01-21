@@ -1,0 +1,3 @@
+[submodule ".vim/bundle/csv.vim"]
+	path = .vim/bundle/csv.vim
+	url = git://github.com/chrisbra/csv.vim.git

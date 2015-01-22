@@ -1,0 +1,72 @@
+[submodule ".vim/bundle/csv.vim"]
+	path = .vim/bundle/csv.vim
+	url = git://github.com/chrisbra/csv.vim
+[submodule ".vim/bundle/ctrlp.vim"]
+	path = .vim/bundle/ctrlp.vim
+	url = git://github.com/kien/ctrlp.vim
+[submodule ".vim/bundle/hardmode"]
+	path = .vim/bundle/hardmode
+	url = git://github.com/wikitopian/hardmode
+[submodule ".vim/bundle/nerdtree"]
+	path = .vim/bundle/nerdtree
+	url = git://github.com/scrooloose/nerdtree
+[submodule ".vim/bundle/rainbow"]
+	path = .vim/bundle/rainbow
+	url = git://github.com/oblitum/rainbow
+[submodule ".vim/bundle/tagbar"]
+	path = .vim/bundle/tagbar
+	url = git://github.com/vim-scripts/Tagbar
+[submodule ".vim/bundle/python-mode"]
+    path = .vim/bundle/python-mode
+    url = git://github.com/kien/python-mode
+[submodule ".vim/bundle/vim-classpath"]
+    path = .vim/bundle/vim-classpath
+    url = git://github.com/tpope/vim-classpath
+[submodule ".vim/bundle/vim-fireplace"]
+    path = .vim/bundle/vim-fireplace
+    url = git://github.com/tpope/vim-fireplace
+[submodule ".vim/bundle/vim-json"]
+    path = .vim/bundle/vim-json
+    url = git://github.com/elzr/vim-json
+[submodule ".vim/bundle/tmuxline.vim"]
+	path = .vim/bundle/tmuxline.vim
+	url = git://github.com/edkolev/tmuxline.vim
+[submodule ".vim/bundle/vim-abolish"]
+	path = .vim/bundle/vim-abolish
+	url = git://github.com/tpope/vim-abolish
+[submodule ".vim/bundle/vim-afterimage"]
+	path = .vim/bundle/vim-afterimage
+	url = git://github.com/tpope/vim-afterimage
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = git://github.com/bling/vim-airline
+[submodule ".vim/bundle/vim-commentary"]
+	path = .vim/bundle/vim-commentary
+	url = git://github.com/tpope/vim-commentary
+[submodule ".vim/bundle/vim-endwise"]
+	path = .vim/bundle/vim-endwise
+	url = git://github.com/tpope/vim-endwise
+[submodule ".vim/bundle/vim-fugitive"]
+	path = .vim/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive
+[submodule ".vim/bundle/vim-indent-guides"]
+	path = .vim/bundle/vim-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides
+[submodule ".vim/bundle/vim-kolor"]
+	path = .vim/bundle/vim-kolor
+	url = git://github.com/zeis/vim-kolor
+[submodule ".vim/bundle/vim-processing"]
+	path = .vim/bundle/vim-processing
+	url = git://github.com/sophacles/vim-processing
+[submodule ".vim/bundle/vim-repeat"]
+	path = .vim/bundle/vim-repeat
+	url = git://github.com/tpope/vim-repeat
+[submodule ".vim/bundle/vim-speeddating"]
+	path = .vim/bundle/vim-speeddating
+	url = git://github.com/tpope/vim-speeddating
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround
+[submodule ".vim/bundle/vim256-color"]
+	path = .vim/bundle/vim256-color
+	url = git://github.com/biikatto/vim256-color

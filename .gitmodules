@@ -10,9 +10,6 @@
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree
-[submodule ".vim/bundle/rainbow"]
-	path = .vim/bundle/rainbow
-	url = git://github.com/oblitum/rainbow
 [submodule ".vim/bundle/tagbar"]
 	path = .vim/bundle/tagbar
 	url = git://github.com/vim-scripts/Tagbar
@@ -70,3 +67,6 @@
 [submodule ".vim/bundle/vim256-color"]
 	path = .vim/bundle/vim256-color
 	url = git://github.com/biikatto/vim256-color
+[submodule ".vim/bundle/rainbow_parentheses.vim"]
+	path = .vim/bundle/rainbow_parentheses.vim
+	url = git@github.com:kien/rainbow_parentheses.vim

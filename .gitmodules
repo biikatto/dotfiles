@@ -67,6 +67,3 @@
 [submodule ".vim/bundle/vim256-color"]
 	path = .vim/bundle/vim256-color
 	url = git://github.com/biikatto/vim256-color
-[submodule ".vim/bundle/rainbow_parentheses.vim"]
-	path = .vim/bundle/rainbow_parentheses.vim
-	url = git@github.com:kien/rainbow_parentheses.vim

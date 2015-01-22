@@ -67,3 +67,9 @@
 [submodule ".vim/bundle/vim256-color"]
 	path = .vim/bundle/vim256-color
 	url = git://github.com/biikatto/vim256-color
+[submodule ".vim/bundle/rainbow"]
+	path = .vim/bundle/rainbow
+	url = git@github.com:luochen1990/rainbow
+[submodule "rainbow"]
+	path = .vim/bundle/rainbow
+	url = git@github.com:luochen1990/rainbow

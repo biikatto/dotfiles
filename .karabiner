@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<root>
+    <modifierdef>HYPER</modifierdef>
+
+    <appdef>
+        <appname>HipChat</appname>
+        <equal>com.hipchat.HipChat</equal>
+    </appdef>
+
+    <appdef>
+        <appname>Terminal</appname>
+        <equal>com.apple.Terminal</equal>
+    </appdef>
+
+	<item>
+    	<name>Shifts to Parentheses</name>
+    	<appendix>Shifts, when pressed alone, type parentheses.  When used with other keys they're normal shifts.</appendix>
+
+    	<identifier>private.shifts_to_parens</identifier>
+
+    	<!-- This is the basic mapping. -->
+    	<autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_R, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::SHIFT_R, KeyCode::KEY_0, ModifierFlag::SHIFT_L</autogen>
+    	<autogen>--KeyOverlaidModifier-- KeyCode::SHIFT_L, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::SHIFT_L, KeyCode::KEY_9, ModifierFlag::SHIFT_R</autogen>
+
+    	<!--
+        	Remap the "rolls" of () and )( because it's too easy to hit one
+        	before finishing the other, and there's no other reason to be
+        	pressing both shift keys at once anyway
+    		change these _ to - if you need to uncomment the old behaviour (xml comments and such)
+
+    		<autogen>__KeyToKey__ KeyCode::SHIFT_L, ModifierFlag::SHIFT_R, KeyCode::KEY_0, ModifierFlag::SHIFT_L, KeyCode::KEY_9, ModifierFlag::SHIFT_L</autogen>
+    		<autogen>__KeyToKey__ KeyCode::SHIFT_R, ModifierFlag::SHIFT_L, KeyCode::KEY_9, ModifierFlag::SHIFT_L, KeyCode::KEY_0, ModifierFlag::SHIFT_L</autogen>
+    	-->
+    	<!--
+        	Remap shift combinations to brackets
+        -->
+    	<autogen>--KeyToKey-- KeyCode::SHIFT_L, ModifierFlag::SHIFT_R, KeyCode::BRACKET_LEFT</autogen>
+    	<autogen>--KeyToKey-- KeyCode::SHIFT_R, ModifierFlag::SHIFT_L, KeyCode::BRACKET_RIGHT</autogen>
+
+    	<autogen>--KeyToKey-- KeyCode::SHIFT_L, ModifierFlag::SHIFT_R | ModifierFlag::CONTROL_L | ModifierFlag::NONE, KeyCode::BRACKET_LEFT, ModifierFlag::SHIFT_L</autogen>
+    	<autogen>--KeyToKey-- KeyCode::SHIFT_R, ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::NONE, KeyCode::BRACKET_RIGHT, ModifierFlag::SHIFT_L</autogen>
+
+    	<!--
+        	Remap Rshift+Space to ') ', because when typing an end paren and
+        	then a space I tend to hit space before I let go of rshift.
+    	-->
+    	<autogen>--KeyToKey-- KeyCode::SPACE, ModifierFlag::SHIFT_R, KeyCode::KEY_0, ModifierFlag::SHIFT_L, KeyCode::SPACE</autogen>
+	</item>
+	<item>
+		<name>Hold tab for ctrl</name>
+		<appendix>Hold tab for ctrl, press for tab</appendix>
+		<identifier>private.tab_ctrl</identifier>
+        <autogen>__KeyOverlaidModifier__ KeyCode::TAB, KeyCode::CONTROL_L, KeyCode::TAB</autogen>
+	</item>
+	<item>
+		<name>Q as HYPER</name>
+		<appendix>Q acts as HYPER</appendix>
+		<identifier>private.q_hyper</identifier>
+        <autogen>__KeyOverlaidModifier__ KeyCode::Q, ModifierFlag::NONE, KeyCode::VK_MODIFIER_HYPER, KeyCode::Q</autogen>
+	</item>
+	<item>
+		<name>F as HYPER</name>
+		<appendix>F acts as HYPER</appendix>
+		<identifier>private.f_hyper</identifier>
+        <autogen>__KeyOverlaidModifier__ KeyCode::F, ModifierFlag::NONE, KeyCode::VK_MODIFIER_HYPER, KeyCode::F</autogen>
+	</item>
+	<item>
+		<name>HYPER + j/k to cmd + (shift) + tab</name>
+		<appendix>Hold HYPER and press j for cmd + tab</appendix>
+		<appendix>Hold HYPER and press k for cmd + shift + tab</appendix>
+		<identifier>private.hyper+j_k_to_cmd+tab</identifier>
+        <autogen>__KeyOverlaidModifier__ KeyCode::J, ModifierFlag::HYPER,
+        KeyCode::TAB, ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyOverlaidModifier__ KeyCode::K, ModifierFlag::HYPER,
+        KeyCode::TAB, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+	</item>
+	<item>
+		<name>HYPER + space to cmd + space</name>
+		<appendix>Hold HYPER and press space for cmd + space</appendix>
+		<identifier>private.hyper+space_to_cmd+space</identifier>
+        <autogen>__KeyOverlaidModifier__ KeyCode::SPACE, ModifierFlag::HYPER,
+        KeyCode::SPACE, ModifierFlag::COMMAND_L</autogen>
+	</item>
+	<item>
+		<name>HYPER + n/p to switch rooms in HipChat</name>
+		<appendix>Hold HYPER and press p to move up one room</appendix>
+		<appendix>Hold HYPER and press n to move down one room</appendix>
+		<identifier>private.hyper+j_k_to_move_hipchat_room</identifier>
+		<only>HipChat</only>
+        <autogen>__KeyOverlaidModifier__ KeyCode::P, ModifierFlag::HYPER,
+        KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyOverlaidModifier__ KeyCode::N, ModifierFlag::HYPER,
+        KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+	</item>
+	<item>
+		<name>HYPER + n/p to switch tabs in Terminal</name>
+		<appendix>Hold HYPER and press p to move left one tab</appendix>
+		<appendix>Hold HYPER and press n to move right one tab</appendix>
+		<identifier>private.hyper+j_k_to_move_terminal_tab</identifier>
+		<only>Terminal</only>
+        <autogen>__KeyOverlaidModifier__ KeyCode::P, ModifierFlag::HYPER,
+        KeyCode::BRACKET_LEFT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyOverlaidModifier__ KeyCode::N, ModifierFlag::HYPER,
+        KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+	</item>
+	<item>
+		<name>HYPER + u/d to page up/down HipChat</name>
+		<appendix>Hold HYPER and press u to page up</appendix>
+		<appendix>Hold HYPER and press p to page down</appendix>
+		<identifier>private.hyper+u_d_to_page_up_down_in_hipchat</identifier>
+		<only>HipChat</only>
+        <autogen>__KeyOverlaidModifier__ KeyCode::U, ModifierFlag::HYPER,
+        KeyCode::PAGEUP</autogen>
+        <autogen>__KeyOverlaidModifier__ KeyCode::D, ModifierFlag::HYPER,
+        KeyCode::PAGEDOWN</autogen>
+	</item>
+	<item>
+		<name>Hold semicolon for ctrl</name>
+		<appendix>Hold semicolon for ctrl, press for semicolon</appendix>
+		<identifier>private.semicolon_ctrl</identifier>
+        <autogen>__KeyOverlaidModifier__ KeyCode::SEMICOLON, KeyCode::CONTROL_L, KeyCode::SEMICOLON</autogen>
+	</item>
+	<item>
+		<name>Tap alt for tab</name>
+		<appendix>Tap alt for tab, hold for alt</appendix>
+		<identifier>private.alt_tab</identifier>
+        <autogen>__KeyOverlaidModifier__ KeyCode::OPTION_L, KeyCode::OPTION_L, KeyCode::TAB</autogen>
+        <autogen>__KeyOverlaidModifier__ KeyCode::OPTION_R, KeyCode::OPTION_R, KeyCode::TAB</autogen>
+	</item>
+	<item>
+		<name>Shift + Space to _</name>
+		<appendix>Remaps shift + space to _</appendix>
+		<identifier>private.shift_space_to_underscore</identifier>
+		<autogen>--KeyOverlaidModifier-- KeyCode::SPACE, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::SHIFT_R, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+		<autogen>--KeyOverlaidModifier-- KeyCode::SPACE, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::SHIFT_L, KeyCode::MINUS, ModifierFlag::SHIFT_R</autogen>
+		<autogen>--KeyOverlaidModifier-- KeyCode::SPACE, ModifierFlag::SHIFT_R | ModifierFlag::NONE, KeyCode::SHIFT_R, KeyCode::MINUS, ModifierFlag::SHIFT_L</autogen>
+		<autogen>--KeyOverlaidModifier-- KeyCode::SPACE, ModifierFlag::SHIFT_L | ModifierFlag::NONE, KeyCode::SHIFT_L, KeyCode::MINUS, ModifierFlag::SHIFT_R</autogen>
+	</item>
+	<item>
+    	<name>Use the correct shift keys</name>
+    	<identifier>private.correct_shift_keys</identifier>
+
+    	<autogen>--KeyToKey-- KeyCode::Q, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::W, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::E, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::R, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::T, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::A, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::S, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::D, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::F, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::G, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::Z, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::X, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::C, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::V, ModifierFlag::SHIFT_L, KeyCode::VK_NONE</autogen>
+
+    	<autogen>--KeyToKey-- KeyCode::Y,         ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::U,         ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::I,         ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::O,         ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::P,         ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::H,         ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::J,         ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::K,         ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::L,         ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::SEMICOLON, ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::N,         ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::M,         ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::COMMA,     ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::DOT,       ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+    	<autogen>--KeyToKey-- KeyCode::QUOTE,     ModifierFlag::SHIFT_R, KeyCode::VK_NONE</autogen>
+	</item>
+</root>

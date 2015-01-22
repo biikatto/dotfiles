@@ -20,3 +20,9 @@ else
 	fi;
 fi;
 unset doIt;
+
+if [ -f "$HOME/Library/Application Support/Karabiner/private.xml" ]
+then
+    mv "$HOME/Library/Application Support/Karabiner/private.xml" "$HOME/Library/Application Support/Karabiner/old_private.xml" 
+    ln -s "$HOME/.karabiner" "$HOME/Library/Application Support/Karabiner/private.xml"
+fi
